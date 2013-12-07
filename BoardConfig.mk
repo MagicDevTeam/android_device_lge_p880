@@ -93,3 +93,7 @@ BOARD_SEPOLICY_UNION := \
     domain.te
 
 BOARD_HARDWARE_CLASS := device/lge/p880/cmhw/
+
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
