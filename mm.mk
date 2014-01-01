@@ -1,5 +1,6 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/mm/config/gsm.mk)
+
+$(call inherit-product, vendor/mm/config/telephony.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
