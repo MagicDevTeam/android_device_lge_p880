@@ -171,10 +171,10 @@
         <item>255</item>
     </integer-array>
 
-    <integer name="config_deviceHardwareKeys">7</integer>
+   <!-- <integer name="config_deviceHardwareKeys">7</integer>-->
 
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 
-    <bool name="config_enableTorch">true</bool>
+   <!-- <bool name="config_enableTorch">true</bool>-->
 
 </resources>
