@@ -56,6 +56,29 @@ public class X3RIL extends RIL implements CommandsInterface {
 
         send(rr);
     }
+    
+    @Override
+    public void
+    setCallForward(int action, int cfReason, int serviceClass,
+                String number, int timeSeconds, Message response) {
+        RILRequest rr
+                = RILRequest.obtain(RIL_REQUEST_SET_CALL_FORWARD, response);
+
+        rr.mParcel.writeInt(action);
+        rr.mParcel.writeInt(cfReason);
+        if (serviceClass == 0)
+            serviceClass = 255;
+        rr.mParcel.writeInt(serviceClass);
+        rr.mParcel.writeInt(PhoneNumberUtils.toaFromString(number));
+        rr.mParcel.writeString(number);
+        rr.mParcel.writeInt (timeSeconds);
+
+        if (RILJ_LOGD) riljLog(rr.serialString() + "> " + requestToString(rr.mRequest)
+                    + " " + action + " " + cfReason + " " + serviceClass
+                    + timeSeconds);
+
+        send(rr);
+    }
 
     @Override
     public void setCellInfoListRate(int rateInMillis, Message response) {
