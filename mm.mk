@@ -19,7 +19,7 @@ $(call inherit-product, vendor/mm/config/nfc_enhanced.mk)
 $(call inherit-product, device/lge/p880/p880.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_RELEASE_NAME := Optimus4X
+PRODUCT_RELEASE_NAME := Optimus4XHD
 PRODUCT_DEVICE := p880
 PRODUCT_NAME := mm_p880
 PRODUCT_BRAND := lge
